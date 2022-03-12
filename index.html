@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="./css/style.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>SPA</title>
+    </head>
+    <body>
+        <header class="box-top">
+            <div class="logo">
+                <img class="logo-top" src="./sources/logo.png">
+            </div>
+            <div class="text-menu">
+                Controle Financeiro
+            </div>
+            <div class="menu">
+                <input type="checkbox" id="check">
+                    <label class="label-one" for="check">
+                        <img id="img-menu" src="./sources/menu.png">
+                    </label>
+                    <nav>
+                        <ul>
+                            <li><a href="">Cadastro de transações</a></li>
+                            <li><a href="">Limpar dados</a></li>
+                        </ul>
+                    </nav>
+            </div>
+        </header>
+        <!--inicio do formulário-->
+        <div class="box-main">
+        <section id=>
+            <div class="box-secundary">
+                <h1 class="text-form">Nova Transação</h1>
+                <form class="form-box" action="#">
+                    <label id="label-secundary" for="transaction">Tipo de Transação</label>
+                        <select name="transaction" id="transaction">
+                            <option class="option" value="Compra">Compra</option>
+                            <option class="option" value="Venda">Venda</option>
+                        </select>
+                    </br>
+                    <label id="label-two" for="merchandise">Mercadoria</label>
+                    <input type="text" id="merchandise" name="merchandise">
+                    <br>
+                    <label id="label-three" for="price">Preço</label>
+                    <input type="text" id="price" name="price" placeholder="R$0,00">
+                    <br>
+                </form>
+                <input type="button" id="submit" name="submit" value="Adicionar Transação">
+            </div>
+        </section>
+        <!--Inicio 3ºparte com tabelas-->
+    <hr>
+    <section id="box-table">
+        <div class="table-one">
+        <h1>Extrato de Transação</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mercadoria</th>
+                    <th class="valor-1">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="tr-alt">
+                    <td>+ Lorem ipsum dolor sit amet consectetur</td>
+                    <td class="price">R$ 12.999,99</td>
+                </tr>
+                <tr class="tr-alt">
+                    <td>- Quis nostrud exercitation</td>
+                    <td class="price">R$ 99,99</td>
+                </tr>
+                <tr class="border-double tr-alt">
+                    <td>+ Lorem ipsum </td>
+                    <td class="price"> R$ 9,99</td>
+                </tr>
+                <tr id="none-line">
+                    <th class="none-line">Total</th>
+                    <th class="valor-2">R$ 12.909,99</th>
+                </tr>
+            </tbody>
+        </table>
+        <div class="lucro">(Lucro)</div>
+        </div>
+    </div>
+    </section>
+    <footer>
+        <div class="footer"></div>
+    </footer>
+        </div>
+    </body>
+</html>

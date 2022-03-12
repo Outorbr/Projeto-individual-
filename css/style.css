@@ -1,0 +1,219 @@
+*{ 
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    width: 411px;
+    font-family: 'Lato';
+}
+
+.box-main{ 
+    height: 100vh;
+}
+.box-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #E0E0E0;
+    width: 411px;
+    height: 60px;
+}
+
+.logo{
+    width: 30px;
+    height: 27.63px;
+    margin-left: 22px;
+    margin-top: 12px;
+}
+.text-menu{
+    font-size: 20px;
+    display: flex;
+    margin-top: 19px;
+    position: absolute;
+    margin-left: 123px;
+}
+.label-one{
+    margin-top: 8px;
+    margin-left: 282px;
+}
+
+#img-menu{
+    margin-left: 12px;
+    margin-top: 19px;
+}
+
+/*Inicio da estilização do Menu*/
+
+.menu{
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+input[type="checkbox"]{
+    display: none;
+}
+
+nav{
+    background-color: #333333;
+    width: initial;
+    height: 100%;
+    left: -412px;
+    position: relative; 
+    margin-top: -46px;
+}
+
+input[type="checkbox"]:checked ~ nav {
+    transform: translateX(412px);
+}
+ul{
+    position: absolute;
+    top: 62px;
+    width: 100%;
+    border: 10px;
+    padding: 8PX;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    padding: 10px;
+    display: block;
+    text-align: end;
+    color: white;
+    font-size: 16px;
+      
+}
+a:hover{
+    background-color: #c4c4c4;
+    color: #333333;
+}
+
+.label.one{
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    
+}
+.text-form{
+    display: none;
+}
+.form-box{
+    width: 371px;
+    height: 290px;
+    display: flex;
+    flex-direction: column;
+}
+
+#label-secundary{
+    margin-top: 14px;
+    margin-left: 20px;
+}
+
+#transaction, #merchandise, #price, #submit{
+    width: 371px;
+    height: 32px;
+    margin-left: 20px;
+    margin-top: 5px;
+    border-radius: 3px;
+    border-color: #979797;
+    background: none;
+    color: #979797;
+    border: 1px solid;
+}
+#label-two , #label-three{
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.option{
+    font-size: 14px;
+    color: #979797;
+
+}
+
+#submit{
+    background: #333333;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/*Inicio da 3º parte com tabelas*/
+
+hr{
+    width: 371px;
+    margin-left: 20px;
+    margin-top: 28px;
+}
+
+.table-one{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+table{
+    margin-left: 25px;
+    width: 371px;
+    border-collapse: collapse;
+    font-size: 14px;
+    line-height: 2.5;
+}
+
+th{
+    font-size: 14px;
+    text-align: justify;
+    position: relative;
+    left: 10px; 
+}
+tr{
+    text-align: justify;
+}
+.price, .total{
+    text-align: end;
+}
+
+th, td{  
+    border-bottom: thin solid #979797;
+}
+.valor-1{
+    text-align: center;
+    position: relative;
+    padding-right: 12px;
+    }
+
+.none-line, .valor-2{
+    border-bottom: none;
+}
+.border-double{
+    border-bottom: double;
+    border-color: #979797;
+}
+.lucro{
+    margin-top: -7px;
+    margin-right: 13px;
+    text-align: end;
+    position: relative;
+    font-size: 10px;
+    }
+    .footer{
+        margin-top: 300px;
+        position: absolute;
+        width: 411px;
+        height: 8px;
+        background: #333333;
+    }
+ 
