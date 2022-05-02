@@ -1,219 +1,399 @@
-*{ 
-    padding: 0px;
-    margin: 0px;
+/* versão mobile */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    width: 411px;
-    font-family: 'Lato';
+
+body {
+  width: 411px;
+  height: 731px;
+  font-family: 'Lato', sans-serif;
 }
 
-.box-main{ 
-    height: 100vh;
+.cabecalho {
+  background-color: #E0E0E0;
 }
-.box-top{
+
+.cabecalho-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+}
+
+.cabecalho-box h1 {
+  font-size: 24px;
+}
+
+.cabecalho-box img {
+  width: 100%;
+  max-width: 40px;
+}
+
+.secao-transacao {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.nova-transacao h1 {
+  display: none;
+}
+
+.campos-transacao {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.campos-transacao label {
+  padding-bottom: 8px;
+}
+
+.campos-transacao select {
+  padding: 5px 0;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  color: #7a7a7a;
+  border: 1px solid #979797c0;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.campos-transacao input {
+  padding: 5px 0;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  border:1px solid #979797c0;
+  border-radius: 4px;
+}
+
+.btn-adicionar-transacao {
+  width: 100%;
+  background-color: #333333;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+}
+
+.secao-extrato {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  line-height: 14px;
+  padding-left: 10px;
+}
+
+.secao-extrato h1 {
+  font-size: 18px;
+  padding: 44px 0 15px 0;
+  border-top: 1px solid #333333;
+}
+
+.secao-extrato td {
+  padding-top: 10px;
+  padding-bottom: 0;
+}
+
+table {
+  width: calc(100% - 20px);
+}
+
+.td-receita {
+  width: 4%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.td-mercadoria {
+  width: 30%;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.td-valor {
+  width: 66%;
+  text-align: right;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#valor-total p {
+  font-size: 12px;
+}
+
+.linha-tabela {
+  padding: 10px 0 0 0;
+  border-bottom: 1px solid #979797;
+}
+
+.linha-dupla-tabela {
+  border-bottom: 5px double #979797;
+}
+
+.sidenav {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #333333;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+padding: 8px 32px 8px 8px;
+text-decoration: none;
+font-size: 20px;
+text-align: right;
+color: #fff;
+display: block;
+transition: 0.3s;
+}
+
+.sidenav a:hover {
+color: #000;
+background-color:#C4C4C4;
+}
+
+.sidenav .closebtn {
+position: absolute;
+top: 0;
+left: 25px;
+font-size: 36px;
+margin-right: 50px;
+}
+
+@media screen and (max-width: 450px) {
+.sidenav {padding-top: 15px;}
+.sidenav a {font-size: 18px;}
+}
+
+/* Versão tablet */
+
+@media screen and (min-width: 412px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .secao-transacao {
+    width: calc(100% - 40px);
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-right: 5px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    background: #E0E0E0;
-    width: 411px;
-    height: 60px;
-}
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    border: 1px solid #979797;
+    border-radius: 4px;
+  }
 
-.logo{
-    width: 30px;
-    height: 27.63px;
-    margin-left: 22px;
-    margin-top: 12px;
-}
-.text-menu{
-    font-size: 20px;
-    display: flex;
-    margin-top: 19px;
-    position: absolute;
-    margin-left: 123px;
-}
-.label-one{
-    margin-top: 8px;
-    margin-left: 282px;
-}
+  .div-tipo-transacao {
+    width: 25%;
+  }
 
-#img-menu{
-    margin-left: 12px;
-    margin-top: 19px;
-}
+  .div-nome-mercadoria {
+    width: 50%;
+  }
 
-/*Inicio da estilização do Menu*/
+  .div-valor-mercadoria {
+    width: 25%;
+  }
 
-.menu{
-    height: 100vh;
-}
-a{
-    text-decoration: none;
-    color: black;
-}
+  .campos-transacao select {
+    margin-right: 10px;
+  }
 
-ul{
-    list-style: none;
-}
+  .campos-transacao input {
+    margin-right: 10px;
+  }
 
-input[type="checkbox"]{
-    display: none;
-}
-
-nav{
-    background-color: #333333;
-    width: initial;
-    height: 100%;
-    left: -412px;
-    position: relative; 
-    margin-top: -46px;
-}
-
-input[type="checkbox"]:checked ~ nav {
-    transform: translateX(412px);
-}
-ul{
-    position: absolute;
-    top: 62px;
+  .div-button {
+    margin-right: 10px;
+  }
+  
+  .nova-transacao {
     width: 100%;
-    border: 10px;
-    padding: 8PX;
+    text-align: center;
+  }
+
+  .nova-transacao h1 {
+    display: initial;
+    font-size: 18px;
+  }
+
+  .secao-transacao label {
+    margin-bottom: 5px;
+  }
+
+  .btn-adicionar-transacao {
+    width: 268px;
+    height: 32px;
+  }
+
+  .secao-extrato h1 {
+    margin-top: 25px;
+    border: 0px solid transparent;
+  }
+}
+
+/* Versão tablet - orientação paisagem */
+
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cabecalho {
+    width: 100%;
+  }
+
+  .cabecalho-box {
+    width: 100%;
     display: flex;
     justify-content: center;
-}
+  }
 
-a{
-    padding: 10px;
-    display: block;
-    text-align: end;
-    color: white;
-    font-size: 16px;
-      
-}
-a:hover{
-    background-color: #c4c4c4;
-    color: #333333;
-}
+  .cabecalho-box h1 {
+    width: 650px;
+    text-align: left;
+    font-size: 20px;
+    padding-left: 20px;
+  }
 
-.label.one{
-    padding: 10px;
-    position: absolute;
-    z-index: 1;
-    
-}
-.text-form{
+  .cabecalho-box span {
     display: none;
-}
-.form-box{
-    width: 371px;
-    height: 290px;
-    display: flex;
-    flex-direction: column;
-}
+  }
 
-#label-secundary{
-    margin-top: 14px;
-    margin-left: 20px;
-}
+  .sidenav .closebtn {
+    display: none;
+  }
 
-#transaction, #merchandise, #price, #submit{
-    width: 371px;
-    height: 32px;
-    margin-left: 20px;
-    margin-top: 5px;
-    border-radius: 3px;
-    border-color: #979797;
-    background: none;
-    color: #979797;
-    border: 1px solid;
-}
-#label-two , #label-three{
-    margin-left: 20px;
-    margin-top: 5px;
-}
+  .cabecalho-box .sidenav {
+    display: contents;
+  }
 
-.option{
-    font-size: 14px;
-    color: #979797;
+  .sidenav {
+    margin-left: 100px;
+  }
 
-}
-
-#submit{
-    background: #333333;
-    color: #ffffff;
-    font-size: 14px;
-}
-
-/*Inicio da 3º parte com tabelas*/
-
-hr{
-    width: 371px;
-    margin-left: 20px;
-    margin-top: 28px;
-}
-
-.table-one{
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-h1{
+  .sidenav a {
+    width: 220px;
+    height: 50px;
+    margin: 15px 0;
+    padding: 15px 0;
+    text-decoration: none;
+    color: black;
+    text-align: center;
     font-size: 18px;
-    margin-bottom: 10px;
-    text-align: center;
-}
+    background-color: #fff;
+  }
 
-table{
-    margin-left: 25px;
-    width: 371px;
-    border-collapse: collapse;
-    font-size: 14px;
-    line-height: 2.5;
-}
+  .sidenav a:hover {
+    color: #fff;
+    background-color: #333333;
+  }
 
-th{
-    font-size: 14px;
-    text-align: justify;
+  .nav-links {
+    display: flex;
+  }
+
+  .sidenav .limpar-dados {
+    width: 160px;
+  }
+
+  .sidenav .cadastro-transacao {
+    width: 230px;
     position: relative;
-    left: 10px; 
-}
-tr{
-    text-align: justify;
-}
-.price, .total{
-    text-align: end;
+  }
+
+  .sidenav .cadastro-transacao:after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: 25%;
+    height: 50%;
+    border-left: 1px solid #333;
+  }
+
+  .secoes-financeiro {
+    display: flex;
+  }
+
+  .secao-transacao {
+    width: 100%;
+    max-width: 400px;
+    height: 360px;
+    margin: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: flex-start;
+
+  }
+  .campos-transacao{
+    width: 100%;
+  }
+
+  .div-button {
+    width: 100%;
+  }
+
+  .btn-adicionar-transacao {
+    width: 100%;
+  }
+
+
+  .secao-transacao input, select {
+    width: 100%;
+    height: 32px;
+    padding-left: 5px;
+  }
+
+
+  .secao-extrato {
+    width: 652px;
+    height: 281px;
+  }
+
+  .secao-extrato h1 {
+    margin-top: 0;
+  }
 }
 
-th, td{  
-    border-bottom: thin solid #979797;
-}
-.valor-1{
-    text-align: center;
-    position: relative;
-    padding-right: 12px;
-    }
+/* Versão desktop */
 
-.none-line, .valor-2{
-    border-bottom: none;
+@media screen and (min-width: 1025px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .secoes-financeiro {
+    display: flex;
+    justify-content: center;
+  }
 }
-.border-double{
-    border-bottom: double;
-    border-color: #979797;
-}
-.lucro{
-    margin-top: -7px;
-    margin-right: 13px;
-    text-align: end;
-    position: relative;
-    font-size: 10px;
-    }
-    .footer{
-        margin-top: 300px;
-        position: absolute;
-        width: 411px;
-        height: 8px;
-        background: #333333;
-    }
- 
